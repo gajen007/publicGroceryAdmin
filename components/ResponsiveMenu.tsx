@@ -1,4 +1,4 @@
-import { logout, selectLoginStatus } from "@/app/redux/auth";
+import { logout } from "@/app/redux/auth";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
   faBars,
@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { RelativePathString, useRouter } from "expo-router";
 import React, { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const styles = StyleSheet.create({
   hamburgerContainer: {
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     width: "100%",
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     zIndex: 100,
   },
   bannerTextContainer: {
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
   bannerTextStyle: {
     fontSize: 25,
-    color: "#f3e308ff",
+    color: "#ffffff",
   },
   expandedMenuContainer: {
     display: "flex",
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     marginRight: 5,
     opacity: 1,
     zIndex: 99,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     width: 350,
   },
   adminMenuItemsContainer: {
@@ -61,13 +61,13 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     display: "flex",
     flexDirection: "row",
-    borderColor: "#f3e308ff",
+    borderColor: "#ffffff",
     borderWidth: 1,
     padding: 5,
   },
   menuTextStyle: {
     marginLeft: 5,
-    color: "#f3e308ff",
+    color: "#ffffff",
     fontSize: 20,
   },
   pressedItemStyle: {
@@ -76,14 +76,14 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     display: "flex",
     flexDirection: "row",
-    borderColor: "#f3e308ff",
+    borderColor: "#ffffff",
     borderWidth: 1,
     padding: 5,
-    backgroundColor: "#f3e308ff",
+    backgroundColor: "#ffffff",
   },
   pressedItemTextStyle: {
     marginLeft: 5,
-    color: "#466E2C",
+    color: "#000000",
     fontSize: 20,
   },
 });
@@ -99,7 +99,6 @@ export default function ResponsiveMenu() {
   const [expanded, setExpanded] = useState<boolean>(false);
   const dispatch = useDispatch();
   const router = useRouter();
-  const loginStatus = useSelector(selectLoginStatus);
   const logoutProcess = () => {
     dispatch(logout());
     router.push("/");
@@ -120,6 +119,11 @@ export default function ResponsiveMenu() {
       title: "Categories",
       route: "/pages/ManageCategories" as RelativePathString,
     },
+    {
+      id: 5,
+      title: "Drivers",
+      route: "/pages/ManageDrivers" as RelativePathString,
+    },
   ];
   const [pressedItemIndex, setPressedItemIndex] = React.useState<number>(0);
   const pressed = (index: number, userType: string) => {
@@ -132,7 +136,6 @@ export default function ResponsiveMenu() {
   };
 
   return (
-    loginStatus && (
     <View style={styles.container}>
       {expanded ? (
         <View style={styles.expandedMenuContainer}>
@@ -199,7 +202,7 @@ export default function ResponsiveMenu() {
             <FontAwesomeIcon
               icon={faBars as IconProp}
               size={32}
-              color="#f3e308ff"
+              color="#ffffff"
             />
           </Pressable>
         </View>
@@ -207,6 +210,6 @@ export default function ResponsiveMenu() {
       <View style={styles.bannerTextContainer}>
         <Text style={styles.bannerTextStyle}>Grocery Store</Text>
       </View>
-    </View>)
+    </View>
   );
 }

@@ -1,19 +1,20 @@
 import { Stack } from "expo-router";
 import "react-native-reanimated";
-import { Provider, } from "react-redux";
+import { Provider, useSelector } from "react-redux";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
-import ResponsiveMenu from "./components/ResponsiveMenu";
+import ResponsiveMenu from "@/components/ResponsiveMenu";
 import { store } from "./redux/store";
+import { selectLoginStatus } from "./redux/auth";
+const persistor = persistStore(store);
 
-export default function RootLayout() {
-  let persistor = persistStore(store);
+function AppLayout() {
+  const loginStatus = useSelector(selectLoginStatus);
   return (
-    <Provider store={store}>
-      <PersistGate persistor={persistor}>
-        <ResponsiveMenu/>        
-        <Stack screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="/" options={{ headerShown: false }} />
+    <>
+      {loginStatus && <ResponsiveMenu />}
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="/" options={{ headerShown: false }} />
           <Stack.Screen
             name="/pages/MerchantHome"
             options={{ headerShown: false }}
@@ -47,12 +48,25 @@ export default function RootLayout() {
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name="/pages/DetailedCart"
+            name="/pages/ManageDrivers"
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="/pages/ManageDrivers/SingleDriver"
             options={{ headerShown: false }}
           />
           <Stack.Screen name="/pages/Login" options={{ headerShown: false }} />
           <Stack.Screen name="/pages/SignUp" options={{ headerShown: false }} />
-        </Stack>
+      </Stack>
+    </>
+  );
+}
+
+export default function RootLayout() {
+  return (
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <AppLayout />
       </PersistGate>
     </Provider>
   );

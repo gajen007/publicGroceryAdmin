@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "grocerystore",
-    "slug": "grocerystore",
+    "name": "groceryadmin",
+    "slug": "groceryadmin",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "grocerystore",
+    "scheme": "groceryadmin",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -20,7 +20,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.gajen007.grocerystore"
+      "package": "com.gajen007.groceryadmin"
     },
     "web": {
       "output": "static",
@@ -36,7 +36,7 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff",
           "dark": {
-            "backgroundColor": "#f3e308ff"
+            "backgroundColor": "#ffffff"
           }
         }
       ]

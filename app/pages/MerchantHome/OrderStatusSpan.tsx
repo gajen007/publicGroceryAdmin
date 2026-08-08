@@ -13,7 +13,7 @@ export default function OrderStatusSpan({
       padding: 5,
       backgroundColor:
         orderStatus === "Picked"
-          ? "#466E2C"
+          ? "#000000"
           : orderStatus === "Denied"
             ? "#F54927"
             : "gray",
@@ -21,9 +21,9 @@ export default function OrderStatusSpan({
     textStyle: {
       color:
         orderStatus === "Picked"
-          ? "#f3e308ff"
+          ? "#ffffff"
           : orderStatus === "Denied"
-            ? "#f3e308ff"
+            ? "#ffffff"
             : "black",
       fontSize: 15,
       alignContent: "center",

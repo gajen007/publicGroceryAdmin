@@ -1,11 +1,11 @@
-import { ImageBaseURL } from "@/app/globals/ImageBaseURL";
-import { rem } from "@/app/globals/Styles";
+import { ImageBaseURL } from "@/globals";
+import { rem } from "@/globals";
 import { router } from "expo-router";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: rem(0.05),
     margin: "2.5%",
     padding: "0.5%",

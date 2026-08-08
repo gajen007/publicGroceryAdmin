@@ -49,7 +49,7 @@ export default function Card({
       paddingRight: 3,
     },
     closeButtonTextStyle: {
-      color: "#f3e308ff",
+      color: "#ffffff",
       fontSize: 18,
     },
     bodyStyle: {

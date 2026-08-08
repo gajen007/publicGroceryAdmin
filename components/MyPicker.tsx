@@ -52,7 +52,7 @@ const MyPicker: React.FC<CustomSelectProps> = ({
       borderWidth: 1,
       borderColor: "#ccc",
       borderRadius: 8,
-      backgroundColor: "#466E2C",
+      backgroundColor: "#000000",
       // Position absolute can be used if you want it to float over content
     },
     optionItem: {
@@ -62,7 +62,7 @@ const MyPicker: React.FC<CustomSelectProps> = ({
     },
     optionText: {
       fontSize: 16,
-      color: "#f3e308ff",
+      color: "#ffffff",
     },
     arrow: {
       fontSize: 12,

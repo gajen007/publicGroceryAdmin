@@ -1,4 +1,4 @@
-import { ApiEndPoint } from "@/app/globals/ApiEndPoint";
+import { ApiEndPoint, validateEmail } from "@/globals";
 import { router } from "expo-router";
 import { useState } from "react";
 import {
@@ -9,7 +9,6 @@ import {
   TextInput,
   View,
 } from "react-native";
-import validateEmail from "../globals/ValidateEmail";
 
 const styles = StyleSheet.create({
   container: {
@@ -19,7 +18,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     marginRight: 5,
     borderWidth: 1,
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderRadius: 5,
     paddingTop: 10,
   },
@@ -43,7 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "600",
     marginBottom: 5,
-    color: "#466E2C",
+    color: "#000000",
   },
   inputStyle: {
     height: 50,
@@ -52,14 +51,14 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 12,
     borderWidth: 1,
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderRadius: 5,
-    color: "#466E2C",
+    color: "#000000",
   },
   signupButton: {
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: 1,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     padding: 10,
     borderRadius: 5,
     alignItems: "center",
@@ -68,7 +67,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   signupButtonText: {
-    color: "#f3e308ff",
+    color: "#ffffff",
     fontSize: 20,
     fontWeight: "bold",
   },
@@ -146,7 +145,7 @@ export default function Page() {
           value={nme}
           onChangeText={(name) => setName(name)}
           inputMode="text"
-          placeholderTextColor="#466E2C"
+          placeholderTextColor="#000000"
         />
       </View>
       <View style={styles.inputContainer}>
@@ -157,7 +156,7 @@ export default function Page() {
           value={em}
           onChangeText={(em) => setEmail(em)}
           inputMode="email"
-          placeholderTextColor="#466E2C"
+          placeholderTextColor="#000000"
         />
       </View>
       <View style={styles.inputContainer}>
@@ -168,7 +167,7 @@ export default function Page() {
           value={confirmEm}
           onChangeText={(ce) => setConfirmEmail(ce)}
           inputMode="email"
-          placeholderTextColor="#466E2C"
+          placeholderTextColor="#000000"
         />
       </View>
       <View style={styles.inputContainer}>
@@ -179,7 +178,7 @@ export default function Page() {
           value={pw}
           onChangeText={(pw) => setPassword(pw)}
           secureTextEntry={true}
-          placeholderTextColor="#466E2C"
+          placeholderTextColor="#000000"
         />
       </View>
       <View style={styles.inputContainer}>
@@ -190,7 +189,7 @@ export default function Page() {
           value={confirmPw}
           onChangeText={(cp) => setConfirmPassword(cp)}
           secureTextEntry={true}
-          placeholderTextColor="#466E2C"
+          placeholderTextColor="#000000"
         />
       </View>
       <View style={styles.column}>

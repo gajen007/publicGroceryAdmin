@@ -1,4 +1,4 @@
-import MyPicker from "@/app/components/MyPicker";
+import MyPicker from "@/components/MyPicker";
 import axios from "axios";
 import * as ImagePicker from "expo-image-picker";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -13,8 +13,8 @@ import {
     TextInput,
     View,
 } from "react-native";
-import { ApiEndPoint } from "../../globals/ApiEndPoint";
-import { ImageBaseURL } from "../../globals/ImageBaseURL";
+import { ApiEndPoint } from "@/globals";
+import { ImageBaseURL } from "@/globals";
 
 const styles = StyleSheet.create({
   container: {
@@ -46,9 +46,9 @@ const styles = StyleSheet.create({
     height: 50, // Remote images REQUIRE dimensions in RN
   },
   updateButton: {
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: 1,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     padding: 5,
     borderRadius: 5,
     alignItems: "center",
@@ -70,9 +70,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   editButton: {
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: 1,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     padding: 5,
     borderRadius: 5,
     alignItems: "center",
@@ -110,14 +110,14 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 12,
     borderWidth: 1,
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderRadius: 5,
-    color: "#466E2C",
+    color: "#000000",
   },
   selectImageButton: {
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: 1,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     padding: 5,
     borderRadius: 5,
     alignItems: "center",

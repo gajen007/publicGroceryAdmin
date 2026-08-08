@@ -1,4 +1,4 @@
-import { ApiEndPoint } from "@/app/globals/ApiEndPoint";
+import { ApiEndPoint } from "@/globals";
 import * as ImagePicker from "expo-image-picker";
 import { useRouter } from "expo-router";
 import { useState } from "react";
@@ -40,15 +40,15 @@ const styles = StyleSheet.create({
     margin: 1,
     marginBottom: 10,
     borderWidth: 1,
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderRadius: 5,
-    color: "#466E2C",
+    color: "#000000",
     marginRight: 2,
   },
   addButton: {
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: 1,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     padding: 15,
     borderRadius: 5,
     alignItems: "center",
@@ -58,14 +58,14 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   addButtonText: {
-    color: "#f3e308ff",
+    color: "#ffffff",
     fontSize: 20,
     fontWeight: "bold",
   },
   selectImageButton: {
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: 1,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     padding: 5,
     borderRadius: 5,
     alignItems: "center",

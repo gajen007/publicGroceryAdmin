@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   linkToLogin: {
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: 1,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     padding: 10,
     borderRadius: 5,
     alignItems: "center",
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   linkToLoginText: {
-    color: "#f3e308ff",
+    color: "#ffffff",
     fontSize: 20,
     fontWeight: "bold",
   },
@@ -48,7 +48,7 @@ export default function Index() {
     <View style={styles.indexViewStyle}>
       <View style={styles.buttonContainer}>
         <Pressable onPress={() => router.push("/pages/Login")} style={styles.linkToLogin}>
-          <Text style={styles.linkToLoginText}>Login</Text>
+          <Text style={styles.linkToLoginText}>Merchant Login</Text>
         </Pressable>
       </View>
       <View style={styles.buttonContainer}>

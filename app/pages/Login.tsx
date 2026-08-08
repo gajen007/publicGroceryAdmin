@@ -1,4 +1,4 @@
-import { ApiEndPoint } from "@/app/globals/ApiEndPoint";
+import { ApiEndPoint, validateEmail } from "@/globals";
 import { login } from "@/app/redux/auth";
 import { useRouter } from "expo-router";
 import { useState } from "react";
@@ -11,7 +11,6 @@ import {
   View,
 } from "react-native";
 import { useDispatch } from "react-redux";
-import validateEmail from "../globals/ValidateEmail";
 
 const styles = StyleSheet.create({
   container: {
@@ -34,7 +33,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "600",
     marginBottom: 5,
-    color: "#466E2C",
+    color: "#000000",
   },
   inputStyle: {
     height: 50,
@@ -43,14 +42,14 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 12,
     borderWidth: 1,
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderRadius: 5,
-    color: "#466E2C",
+    color: "#000000",
   },
   loginButton: {
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: 1,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     padding: 10,
     borderRadius: 5,
     alignItems: "center",
@@ -59,7 +58,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   loginButtonText: {
-    color: "#f3e308ff",
+    color: "#ffffff",
     fontSize: 20,
     fontWeight: "bold",
   },
@@ -83,7 +82,7 @@ const styles = StyleSheet.create({
 
 export default function Page() {
   const [userName, setUsername] = useState<string>("");
-  const [passWord, setPassword] = useState<string>("kinkiniminkini");
+  const [passWord, setPassword] = useState<string>("");
   const [clickable,setClickable] = useState<boolean>(true);
   const dispatch = useDispatch();
   const router = useRouter();

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import { ApiEndPoint } from "../../globals/ApiEndPoint";
+import { ApiEndPoint } from "@/globals";
 import CategoryGrid from "./CategoryGrid";
 import { RelativePathString, router } from "expo-router";
 
@@ -32,11 +32,11 @@ const styles = StyleSheet.create({
     marginTop: 2,
     flexDirection: "row",
     borderWidth: 1,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     borderRadius: 5,
     padding: 17,
   },
-  menuTextStyle: { marginLeft: 5, color: "#466E2C", fontSize: 20 },
+  menuTextStyle: { marginLeft: 5, color: "#000000", fontSize: 20 },
   pressedItemStyle: {
     marginTop: 2,
     flexDirection: "row",
@@ -45,11 +45,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 17,
   },
-  pressedItemTextStyle: { marginLeft: 5, color: "#f3e308ff", fontSize: 20 },
+  pressedItemTextStyle: { marginLeft: 5, color: "#ffffff", fontSize: 20 },
   loginButton: {
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: 1,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     padding: 5,
     borderRadius: 5,
     alignItems: "center",
@@ -57,9 +57,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   addButton: {
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: 1,
-    backgroundColor: "#466E2C",
+    backgroundColor: "#000000",
     padding: 5,
     borderRadius: 5,
     alignItems: "center",
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   addButtonText: {
-    color: "#f3e308ff",
+    color: "#ffffff",
     fontSize: 20,
     fontWeight: "bold",
   },

@@ -1,4 +1,4 @@
-import { ApiEndPoint } from "@/app/globals/ApiEndPoint";
+import { ApiEndPoint } from "@/globals";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
@@ -28,9 +28,11 @@ const styles = StyleSheet.create({
 
 interface Order {
   orderID: string;
+  dateOrdered: string;
   arrivedAt: string;
   customerName: string;
   itemsCount: string;
+  serveDate: string;
   serveTime: string;
   serveType: string;
   status: string;
@@ -68,9 +70,11 @@ export default function Page() {
                 <OrderGrid
                   key={order.orderID}
                   orderID={order.orderID}
+                  dateOrdered={order.dateOrdered}
                   arrivedAt={order.arrivedAt}
                   customerName={order.customerName}
                   itemsCount={order.itemsCount}
+                  serveDate={order.serveDate}
                   serveTime={order.serveTime}
                   serveType={order.serveType}
                   status={order.status}

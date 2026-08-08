@@ -1,4 +1,4 @@
-import { ImageBaseURL } from "@/app/globals/ImageBaseURL";
+import { ImageBaseURL } from "@/globals";
 import { Image, StyleSheet, Text, View } from "react-native";
 
 interface ProductRowInOrderProps {
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 5,
-    borderColor: "#466E2C",
+    borderColor: "#000000",
     borderWidth: 1,
     margin: 5,
   },
