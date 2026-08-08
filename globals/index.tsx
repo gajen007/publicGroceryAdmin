@@ -2,8 +2,6 @@ import { Dimensions } from 'react-native';
 
 export const ApiEndPoint = 'http://localhost:3000/groceryStore/';
 
-export const socketApiEndPoint = 'http://localhost:3000/';
-
 export const ImageBaseURL = 'http://localhost:3000/';
 
 export const convertPrice = (priceString:string) =>{

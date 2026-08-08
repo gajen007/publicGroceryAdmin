@@ -34,7 +34,6 @@ interface OrderGridProps {
   arrivedAt: string;
   customerName: string;
   serveType: string;
-  serveDate:string;
   serveTime: string;
   totalValue: string;
 }
@@ -47,7 +46,6 @@ export default function OrderGrid({
   arrivedAt,
   customerName,
   serveType,
-  serveDate,
   serveTime,
   totalValue,
 }: OrderGridProps) {
@@ -132,7 +130,7 @@ export default function OrderGrid({
               size={15}
               color="#000000"
             /></Text>
-            <Text style={styles.textStyle}>Ordered at {arrivedAt} of {dateOrdered}</Text>
+            <Text style={styles.textStyle}>Ordered at {arrivedAt}</Text>
         </View>
 
         <View style={styles.rowStyle}>
@@ -144,7 +142,8 @@ export default function OrderGrid({
             />
           </Text>
           <Text style={styles.textStyle}>{serveType}</Text>
-          <Text style={styles.textStyle}>{serveTime} of {serveDate}</Text>
+          <Text style={styles.textStyle}>{serveTime}</Text>
+          <Text style={styles.textStyle}>of {dateOrdered}</Text>
           <View style={{marginLeft:'15%',flexDirection:'row-reverse'}}>
             <Text style={{color:'rgb(31, 133, 21)',fontWeight:'bold'}}>{status}</Text>
           </View>

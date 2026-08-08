@@ -119,16 +119,6 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     marginRight: 10,
   },
-  chatLink:{
-    backgroundColor:'#000000',
-    padding:10,
-    borderRadius:5,
-    margin:10,
-  },
-  chatText:{
-    color:'#ffffff',
-    fontWeight:'bold',
-  }
 });
 
 interface Product {
@@ -446,13 +436,6 @@ export default function SingleOrder() {
             );
           })
       }
-      </View>
-      <View style={styles.column}>
-        {
-        orderStatus==="New"||orderStatus==="Accepted"||orderStatus==="Await"||orderStatus==="Assigned"?
-        <Pressable onPress={()=>router.push({pathname:"/pages/Chat/SingleChatScreen",params:{orderID, opponentType: "customer"}})} style={styles.chatLink}><Text style={styles.chatText}>Chat with Customer</Text></Pressable>:
-        orderStatus==="Dispatched"?<Pressable onPress={()=>router.push({pathname:"/pages/Chat/SingleChatScreen",params:{orderID, opponentType: "driver"} })} style={styles.chatLink}><Text style={styles.chatText}>Chat with Driver</Text></Pressable>:null
-        }
       </View>
     </View>
   );
