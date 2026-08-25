@@ -13,4 +13,4 @@ COPY . .
 
 EXPOSE ${WEB_PORT}
 
-CMD npx expo start --web --port ${WEB_PORT} --non-interactive
+CMD CI=1 npx expo start --web --port ${WEB_PORT}
